@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Développeur Full Stack", "DevOps" ];
+  const toRotate = ["Développeur Full Stack", "DevOps"];
   const period = 2000;
 
   useEffect(() => {
@@ -54,28 +54,30 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Bienvenue à mon Portfolio !</span>
-                <h1>{`Salut! C'est Mohamed`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Développeur Full Stack", "DevOps", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline">Bienvenue à mon Portfolio !</span>
+                  <h1>{`Salut! C'est Mohamed`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Développeur Full Stack", "DevOps", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Développeur Full Stack passionné, avec 2 ans
-d'expérience au sein d'une entreprise spécialisée dans
-le développement de solutions web sur mesure.
-Expert en développement frontend et backend,
-intégration CI/CD et déploiement cloud, je conçois des
-applications performantes, évolutives et optimisées.
-Grâce à ma réactivité et mon adaptabilité, j'interviens
-efficacement sur des projets complexes, en apportant
-des solutions innovantes et adaptées aux besoins des
-clients</p>
-                  <button onClick={() => console.log('connect')}>Discutons ensemble <ArrowRightCircle size={25} /></button>
-              </div>}
+                    d'expérience au sein d'une entreprise spécialisée dans
+                    le développement de solutions web sur mesure.
+                    Expert en développement frontend et backend,
+                    intégration CI/CD et déploiement cloud, je conçois des
+                    applications performantes, évolutives et optimisées.
+                    Grâce à ma réactivité et mon adaptabilité, j'interviens
+                    efficacement sur des projets complexes, en apportant
+                    des solutions innovantes et adaptées aux besoins des
+                    clients</p>
+                  <button onClick={() => document.getElementById('connect').scrollIntoView({ behavior: 'smooth' })}>
+                    Discutons ensemble <ArrowRightCircle size={25} />
+                  </button>
+                </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <img src={headerImg} alt="Header Img" />
                 </div>}
             </TrackVisibility>
           </Col>
