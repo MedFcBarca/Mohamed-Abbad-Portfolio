@@ -1,16 +1,11 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import { FaReact, FaNodeJs, FaDatabase, FaCogs, FaRegCheckCircle, FaSearch, FaArrowLeft, FaArrowRight,FaMobileAlt } from 'react-icons/fa';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
+import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -28,37 +23,116 @@ export const Skills = () => {
     }
   };
 
+  const skillsData = [
+    {
+      title: 'Développement Frontend',
+      description: '🔹 React.js, Next.js, Vue.js, Angular, MUI, Vite, Webpack, TypeScript, JavaScript, CSS, SCSS, Fabric.js',
+      icon: <FaReact size={50} color="#61DBFB" />,
+    },
+    {
+      title: 'Développement Backend',
+      description: '🔹 Node.js, Express.js, NestJS, Java, C#, .NET, Symfony, Python, GO, API REST & GraphQL',
+      icon: <FaNodeJs size={50} color="#68A063" />,
+    },
+    {
+      title: 'Bases de Données',
+      description: '🔹 PostgreSQL, MySQL, MongoDB, SQLite, Prisma',
+      icon: <FaDatabase size={50} color="#F5DB00" />,
+    },
+    {
+      title: 'DevOps & Outils',
+      description: '🔹 Git, Jenkins, GitHub Actions, Docker, Docker Compose, Kubernetes, Grafana, SonarQube, Azure, AWS, CI/CD',
+      icon: <FaCogs size={50} color="#B0BEC5" />,
+    },
+    {
+      title: 'Méthodologies & Gestion de Projet',
+      description: '🔹 Agile (Scrum, Kanban), Jira, Rédaction et gestion de cahiers des charges',
+      icon: <FaRegCheckCircle size={50} color="#4CAF50" />,
+    },
+    {
+      title: 'Tests et Qualité du Code',
+      description: '🔹 Jest, Supertest, Chai, Mocha, FastCheck, Cypress',
+      icon: <FaRegCheckCircle size={50} color="#FFEB3B" />,
+    },
+    {
+      title: 'SEO, SEA & SMO',
+      description: '🔹 SEO, SEA & SMO',
+      icon: <FaSearch size={50} color="#F44336" />,
+    },
+    {
+      title: 'Expérience en E-commerce',
+      description: '🔹 Expérience en E-commerce',
+      icon: <FaSearch size={50} color="#FF5722" />,
+    },
+    {
+      title: 'Développement Mobile',
+      description: '🔹 Android Studio, Swift, React Native',
+      icon: <FaMobileAlt size={50} color="#FF9800" />, // Utilisation d'une nouvelle icône pour le mobile
+    }
+  ];
+
+  const leftArrow = (
+    <FaArrowLeft
+      size={40}
+      color="#fff"
+      style={{
+        position: 'absolute',
+        top: '70%',
+        left: '10px',
+        transform: 'translateY(-50%)',
+        zIndex: 10,
+        cursor: 'pointer',
+        transition: 'transform 0.3s ease',
+      }}
+    />
+  );
+  
+  const rightArrow = (
+    <FaArrowRight
+      size={40}
+      color="#fff"
+      style={{
+        position: 'absolute',
+        top: '70%',
+        right: '10px',
+        transform: 'translateY(-50%)',
+        zIndex: 10,
+        cursor: 'pointer',
+        transition: 'transform 0.3s ease',
+      }}
+    />
+  );
+
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                        </Carousel>
-                    </div>
-                </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="skill-bx wow zoomIn">
+              <h2>Compétences</h2>
+              <p>
+                Découvrez mes compétences techniques dans différents domaines du développement et de la gestion de projet.
+              </p>
+              <Carousel
+                responsive={responsive}
+                infinite={true}
+                className="skill-slider"
+                customLeftArrow={leftArrow}
+                customRightArrow={rightArrow}
+              >
+                {skillsData.map((skill, index) => (
+                  <div className="item" key={index}>
+                    <div className="skill-icon">{skill.icon}</div>
+                    <h5>{skill.title}</h5>
+                    <p>{skill.description}</p>
+                  </div>
+                ))}
+              </Carousel>
             </div>
+          </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+      </div>
+      <img className="background-image-left" src={colorSharp} alt="Background design" />
     </section>
-  )
-}
+  );
+};
