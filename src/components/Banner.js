@@ -57,7 +57,7 @@ export const Banner = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Bienvenue à mon Portfolio !</span>
                   <h1>{`Salut! C'est Mohamed`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Développeur Full Stack", "DevOps", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Développeur Full Stack passionné, avec 2 ans
+                  <p>Développeur Full Stack passionné, avec 3 ans
                     d'expérience au sein d'une entreprise spécialisée dans
                     le développement de solutions web sur mesure.
                     Expert en développement frontend et backend,
