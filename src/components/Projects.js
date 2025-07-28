@@ -112,7 +112,7 @@ export const Projects = () => {
                         <p>Mon parcours en un coup d’œil : une formation Bac+5 spécialisée dans le digital, combinée à deux années d’expériences en développement fullstack et DevOps. N’hésitez pas à parcourir mon CV pour découvrir mes compétences techniques, mes expériences professionnelles, mes projets et mes engagements.</p>
 
                         <iframe
-                          src={require('../assets/font/Abbad - CV - Mohamed.')}
+                          src={require('../assets/font/Abbad - CV - Mohamed..pdf')}
                           width="100%"
                           height="600px"
                           style={{ border: "none" }}
