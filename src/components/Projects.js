@@ -81,9 +81,9 @@ export const Projects = () => {
                       <Nav.Item>
                         <Nav.Link eventKey="first">Projets</Nav.Link>
                       </Nav.Item>
-                      <Nav.Item>
+                      {/* <Nav.Item>
                         <Nav.Link eventKey="second">Mon CV</Nav.Link>
-                      </Nav.Item>
+                      </Nav.Item> */}
                       <Nav.Item>
                         <Nav.Link eventKey="third">Expériences & Formations</Nav.Link>
                       </Nav.Item>
@@ -125,7 +125,7 @@ export const Projects = () => {
 
                         <h4>Expériences Professionnelles</h4>
                         <ul>
-                          <li><strong>Développeur Fullstack en alternance</strong> (2 ans) - Spyrals</li>
+                          <li><strong>Développeur Fullstack en alternance</strong> (3 ans) - Spyrals</li>
                           <li><strong>Stage</strong> - CHU</li>
                           <li><strong>Développeur Full-stack / Expert Digital Marketing</strong> (15 mois) - Grands projets de fin d'études : <em>Thé Tip Top</em> pour le web et mobile, <em>FuriousDuck</em> pour le workflow</li>
                           <li><strong>Développeur Full-stack</strong> (15 mois) - Grands projets de fin d'études : <em>AtypikHouse</em> (application web et mobile)</li>
